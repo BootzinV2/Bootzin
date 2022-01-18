@@ -1,0 +1,34 @@
+$onlyForIDs[632955732903460874;393146429616685056;você não tem permissão para usar esse comando!]
+$nomention
+$try
+$color[0083FF]
+$author[$ping]
+$authorIcon[https://media.discordapp.net/attachments/734166656728694824/925584825744765009/dcl_pgPing.gif]
+$description[```js
+$message
+```
+⬆️
+> Tempo de execução: **$executionTime**
+> Ping: $ping
+⬇️
+```$replaceText[js
+$eval[$replaceText[$noMentionMessage;";$;-1]];js;"0 erros na execução do comando";-1]
+```]
+$footer[$username[$authorID]#$discriminator[$authorID]]
+$footerIcon[$authorAvatar]
+$catch
+$useChannel[929565624311631922]
+$addCmdReactions[<:emoji_43:930682282111553607>]
+$description[```
+$error[message]
+```
+tempo de execução: **$executionTime**
+ping: **$ping**]
+$endtry
+
+
+
+**APAGUE**
+Use bdscript 2
+Altere o $useChannel[Canal para enviar mensagem de erro]
+Altere o $addCmdReactions[emoji para adicionar no comando de eval]
