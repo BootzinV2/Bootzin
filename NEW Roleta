@@ -1,0 +1,70 @@
+$argsCheck[>1;use Assim: `b!roleta <valor>`]
+$onlyIf[$isNumber[$message[1]]==true;> <:erro:925308445228412929>・Coloque apenas números.]
+$onlyIf[$getVar[moeda;$authorID]>=$message[1];> <:erro:925308445228412929>・Você não tem ``$message[1] moedas`` em seu Cash]
+$onlyIf[$message[1]>=1;> <:erro:925308445228412929>・Você não pode apostar um valor negativo.]
+
+$if[$randomText[lose2;win;lose;sorte]==win]
+$nomention
+$color[00ff00]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎰  **Roleta**
+$randomText[🍐🍓🍉;🍇🍐🍓;🍉🍇🍉;🍍🍎🍇;🍋🍋🍍;🍎🍓🍒;🍓🍇🍊;🍌🍐🥭;🥭🍋🍇;🍐🍇🍉]
+$randomText[🍉🍉🍉;🍊🍊🍊;🍓🍓🍓;🍎🍎🍎;🍐🍐🍐;🍒🍒🍒;🍇🍇🍇;🍍🍍🍍]
+$randomText[🥭🍇🍊;🍐🥭🍉;🍐🍓🍉;🍉🍇🍐;🍇🍊🍐;🥭🍇🍊;🍌🍐🍓;🍇🍐🥭;🍉🍉🍇]
+
+Você ganhou ``$numberSeparator[$message[1];.]  moedas``]
+
+$setVar[moeda;$sum[$message[1];$getVar[moeda;$authorID]];$authorID]
+$endif
+
+$if[$randomText[lose2;win;lose;sorte]==lose]
+$nomention
+$color[ff0000]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎰  **Roleta**
+$randomText[🍐🍓🍉;🍇🍐🍓;🍉🍇🍉;🍍🍎🍇;🍋🍋🍍;🍎🍓🍒;🍓🍇🍊;🍌🍐🥭;🥭🍋🍇;🍐🍇🍉]
+$randomText[🍊🍐🍌;🥭🍊🍇;🍊🍋🍓;🥭🍋🍐;🍉🍐🍋;🍒🍊🥭;🍐🍉🍇;🍊🍋🍒;🍐🍉🍊]
+$randomText[🥭🍇🍊;🍐🥭🍉;🍐🍓🍉;🍉🍇🍐;🍇🍊🍐;🥭🍇🍊;🍌🍐🍓;🍇🍐🥭;🍉🍉🍇]
+
+Você perdeu ``$numberSeparator[$message[1];.] moedas``]
+
+$setVar[moeda;$sub[$getVar[moeda;$authorID];$message[1]];$authorID]
+$endif
+
+$if[$randomText[lose2;win;lose;sorte]==lose2]
+$nomention
+$color[ff0000]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎰  **Roleta**
+$randomText[🍐🍓🍉;🍇🍐🍓;🍉🍇🍉;🍍🍎🍇;🍋🍋🍍;🍎🍓🍒;🍓🍇🍊;🍌🍐🥭;🥭🍋🍇;🍐🍇🍉]
+$randomText[🍊🍐🍌;🥭🍊🍇;🍊🍋🍓;🥭🍋🍐;🍉🍐🍋;🍒🍊🥭;🍐🍉🍇;🍊🍋🍒;🍐🍉🍊]
+$randomText[🥭🍇🍊;🍐🥭🍉;🍐🍓🍉;🍉🍇🍐;🍇🍊🍐;🥭🍇🍊;🍌🍐🍓;🍇🍐🥭;🍉🍉🍇]
+
+Você perdeu $getVar[currency] ``$numberSeparator[$message[1];.] moedas``]
+
+$setVar[moeda;$sub[$getVar[moeda;$authorID];$message[1]];$authorID]
+$endif
+
+$if[$randomText[lose2;win;lose;sorte]==sorte]
+$nomention
+$color[7B07FF]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎰  **Roleta da Sorte**🎊
+$randomText[🍕🍪🍬;🍩🍪🍪;🍬🍩🍬;🍫🍟🍩;🍕🍕🍫;🍟🍪🍦;🍪🍩🧁;🍦🍕🍭;🍭🍦🍬;🍪🍭🍬]
+$randomText[🍬🍬🍬;🧁🧁🧁;🍪🍪🍪;🍟🍟🍟;🍕🍕🍕;🍦🍦🍦;🍩🍩🍩;🍫🍫🍫;🍭🍭🍭]
+$randomText[🍭🍩🧁;🍕🍩🍬;🍕🍪🍬;🍬🍩🍕;🍩🧁🍕;🍭🍩🧁;🍦🍕🍪;🍩🍕🍭;🍬🍬🍩]
+
+Você ganhou ``$numberSeparator[$calculate[$message[1]+$message[1]];.]  moedas``]
+
+$setVar[moeda;$sum[$calculate[$message[1]+$message[1]];$getVar[moeda;$authorID]];$authorID]
+$endif
+
+$thumbnail[https://media.discordapp.net/attachments/926332505404104715/926332524974710835/1f3b0.png]
+
+$cooldown[1s;]
+
+$reply
