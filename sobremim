@@ -1,0 +1,11 @@
+$onlyIf[$charCount[$message]<=25;> <:erro:925308445228412929>・<@$authorID>, Você não pode colocar um sobremim com mais de 25 caracteres.
+> Quantia de caracteres do seu sobremim: $charCount[$message]/25]
+$color[00ff41]
+$thumbnail[https://media.discordapp.net/attachments/926831709767491618/927110687036174426/876873891266580510.png]
+$title[Sucesso]
+$description[Novo sobremim:
+$message
+
+**Caracteres:** $charCount[$message]/25]
+
+$setVar[sobremim;$message;$authorID]
