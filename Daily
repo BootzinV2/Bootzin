@@ -1,0 +1,102 @@
+$nomention
+
+$author[$username[$authorID]#$discriminator[$authorID]]
+$authorIcon[$authorAvatar]
+
+$if[$getVar[streak;$authorID]==0] 
+
+$color[0e00ff]
+$description[Na sua recompensa diária hoje Você ganhou 
+$numberSeparator[$random[2000;5000];.] moedas!
+
+<:banco:925528828510634076>・Suas moedas diárias estão em:
+ 2.000 - 5.000
+> ✅❌❌❌❌❌❌]
+
+$setVar[moeda;$sum[$getVar[moeda;$authorID];$random[2000;5000]];$authorID]
+$endif
+
+$if[$getVar[streak;$authorID]==1]
+
+$color[19FF00]
+$description[Na sua recompensa diária hoje Você ganhou 
+ $numberSeparator[$random[2000;6000];.] moedas!
+
+<:banco:925528828510634076>・Suas moedas diárias estão em:
+ 2.000 - 6.000
+> ✅✅❌❌❌❌❌]
+
+$setVar[moeda;$sum[$getVar[moeda;$authorID];$random[2000;6000]];$authorID]
+$endif
+
+$if[$getVar[streak;$authorID]==2]
+
+$color[9400FF]
+$description[Na sua recompensa diária hoje Você ganhou 
+$numberSeparator[$random[2000;7000];.] moedas!
+
+<:banco:925528828510634076>・Suas moedas diárias estão em:
+ 2.000 - 7.000
+> ✅✅✅❌❌❌❌]
+
+$setVar[moeda;$sum[$getVar[moeda;$authorID];$random[2000;7000]];$authorID]
+$endif
+
+$if[$getVar[streak;$authorID]==3]
+
+$color[9400FF]
+$description[Na sua recompensa diária hoje Você ganhou 
+$numberSeparator[$random[2000;8000];.] moedas!
+
+<:banco:925528828510634076>・Suas moedas diárias estão em:
+ 2.000 - 8.000
+> ✅✅✅✅❌❌❌]
+
+$setVar[moeda;$sum[$getVar[moeda;$authorID];$random[2000;8000]];$authorID]
+$endif
+
+$if[$getVar[streak;$authorID]==4]
+
+$color[9400FF]
+$description[Na sua recompensa diária hoje Você ganhou 
+ $numberSeparator[$random[2000;9000];.] moedas!
+
+<:banco:925528828510634076>・Suas moedas diárias estão em:
+ 2.000 - 9.000
+> ✅✅✅✅✅❌❌]
+
+$setVar[moeda;$sum[$getVar[moeda;$authorID];$random[2000;9000]];$authorID]
+$endif
+
+$if[$getVar[streak;$authorID]==5]
+
+$color[9400FF]
+$description[Na sua recompensa diária hoje Você ganhou 
+$numberSeparator[$random[2000;10000];.] moedas!
+
+<:banco:925528828510634076>・Suas moedas diárias estão em:
+ 2.000 - 10.000
+> ✅✅✅✅✅✅❌]
+
+$setVar[moeda;$sum[$getVar[moeda;$authorID];$random[2000;10000]];$authorID]
+$endif
+$if[$getVar[streak;$authorID]==6]
+
+
+$color[9400FF]
+$description[Na sua recompensa diária hoje Você ganhou 
+$numberSeparator[$random[2000;20000];.] moedas!
+
+<:banco:925528828510634076>・Suas moedas diárias estão em:
+ 2.000 - 20.000
+> ✅✅✅✅✅✅✅]
+
+$setVar[moeda;$sum[$getVar[moeda;$authorID];$random[2000;20000]];$authorID]
+$endif
+
+$footer[Streak Atual: $sum[$getVar[streak;$authorID];1]]
+$globalCooldown[24h;<@$authorID>calma ae, espere %time% para trabalhar novamente!]
+
+$setVar[streak;$sum[$getVar[streak;$authorID];1];$authorID]
+
+$reply
