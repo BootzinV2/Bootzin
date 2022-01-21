@@ -1,0 +1,21 @@
+$argsCheck[>1;use Assim: `b!idade <idade>`]
+$onlyIf[$isNumber[$message[1]]==true;> <:erro:925308445228412929>・Coloque apenas números.]
+$onlyIf[$charCount[$message]<=3;> <:erro:925308445228412929>・<@$authorID>, Você não pode colocar uma idade com mais de 3 caracteres.
+> Quantia de caracteres da sua idade: $charCount[$message]/3]
+$onlyIf[$checkContains[$noMentionMessage;-;--;+;$;&;';";!;?;/;);(;@;#;*;.;,]!=true;> <@$authorID> Não coloque símbolos!]
+
+$nomention
+$color[00ff41]
+$thumbnail[https://media.discordapp.net/attachments/926831709767491618/927110687036174426/876873891266580510.png]
+$title[Sucesso]
+$description[Nova idade:
+$message
+
+**Caracteres:** $charCount[$message]/3]
+
+$footer[$username#$discriminator[$authorID]]
+$footerIcon[$authorAvatar]
+
+$setVar[idade;$message;$authorID]
+
+$reply
