@@ -1,0 +1,17 @@
+$onlyIf[$charCount[$message]<=15;> <:erro:925308445228412929>・<@$authorID>, Você não pode colocar um nick com mais de 15 caracteres.
+> Quantia de caracteres do seu nick: $charCount[$message]/15]
+
+$nomention
+$color[00ff41]
+$thumbnail[https://media.discordapp.net/attachments/926831709767491618/927110687036174426/876873891266580510.png]
+$title[Sucesso]
+$description[Novo nick:
+$message
+
+**Caracteres:** $charCount[$message]/15]
+
+$footer[$username#$discriminator[$authorID]]
+$footerIcon[$authorAvatar]
+
+$setVar[nick;$message;$authorID]
+$reply
