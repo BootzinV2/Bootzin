@@ -1,0 +1,22 @@
+$onlyIf[$userExists[$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]==true;> <:erro:925308445228412929>・Usuário inválido!]
+
+$nomention
+$title[$replaceText[$replaceText[$isBot[$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]];false;$getVar[vipcard;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]];1];true;🤖;1]》Perfil de: $username[$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]#$discriminator[$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]]
+$color[000101]
+$thumbnail[$userAvatar[$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]]
+$description[
+**Nick:**
+`$getVar[nick;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]`
+**Idade:** 
+`$getVar[idade;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]`
+✏ **Sobremim:**
+$getVar[sobremim;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]
+<:reps:926593482460651550> Reps: `$getVar[reps;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]`
+💍 **Casado(a) com:** $getVar[casados;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]
+
+$getVar[currency] Moedas totais: 
+`$numberSeparator[$sum[$getVar[moedas;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]];$getVar[moedas/bank;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]];.]  moedas`
+🗓 Streak: `$getVar[streak;$replaceText[$replaceText[$isNumber[$message[1]];false;$mentioned[1;yes];1];true;$message[1];1]]`]
+
+$footer[$username#$discriminator[$authorID]]
+$footerIcon[$authorAvatar]
