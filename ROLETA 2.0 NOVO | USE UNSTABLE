@@ -1,0 +1,74 @@
+$onlyIf[$getVar[moeda;$authorID]>=$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1];> <:erro:925308445228412929>・Você não tem ``$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1] moedas`` em seu Cash]
+$onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1]>=1;> <:erro:925308445228412929>・Você não pode apostar um valor negativo.]
+
+$if[$randomText[lose2;win;lose;sorte]==win]
+$nomention
+$color[00ff00]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎰  **Roleta**
+$randomText[🍐🍓🍉;🍇🍐🍓;🍉🍇🍉;🍍🍎🍇;🍋🍋🍍;🍎🍓🍒;🍓🍇🍊;🍌🍐🥭;🥭🍋🍇;🍐🍇🍉]
+$randomText[🍉🍉🍉;🍊🍊🍊;🍓🍓🍓;🍎🍎🍎;🍐🍐🍐;🍒🍒🍒;🍇🍇🍇;🍍🍍🍍]
+$randomText[🥭🍇🍊;🍐🥭🍉;🍐🍓🍉;🍉🍇🍐;🍇🍊🍐;🥭🍇🍊;🍌🍐🍓;🍇🍐🥭;🍉🍉🍇]
+
+Você ganhou ``$numberSeparator[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1];.]  moedas``]
+
+$setVar[moeda;$sum[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1];$getVar[moeda;$authorID]];$authorID]
+$endif
+
+$if[$randomText[lose2;win;lose;sorte]==lose]
+$nomention
+$color[ff0000]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎰  **Roleta**
+$randomText[🍐🍓🍉;🍇🍐🍓;🍉🍇🍉;🍍🍎🍇;🍋🍋🍍;🍎🍓🍒;🍓🍇🍊;🍌🍐🥭;🥭🍋🍇;🍐🍇🍉]
+$randomText[🍊🍐🍌;🥭🍊🍇;🍊🍋🍓;🥭🍋🍐;🍉🍐🍋;🍒🍊🥭;🍐🍉🍇;🍊🍋🍒;🍐🍉🍊]
+$randomText[🥭🍇🍊;🍐🥭🍉;🍐🍓🍉;🍉🍇🍐;🍇🍊🍐;🥭🍇🍊;🍌🍐🍓;🍇🍐🥭;🍉🍉🍇]
+
+Você perdeu ``$numberSeparator[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1];.] moedas``]
+
+$setVar[moeda;$sub[$getVar[moeda;$authorID];$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1]];$authorID]
+$endif
+
+$if[$randomText[lose2;win;lose;sorte]==lose2]
+$nomention
+$color[ff0000]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎰  **Roleta**
+$randomText[🍐🍓🍉;🍇🍐🍓;🍉🍇🍉;🍍🍎🍇;🍋🍋🍍;🍎🍓🍒;🍓🍇🍊;🍌🍐🥭;🥭🍋🍇;🍐🍇🍉]
+$randomText[🍊🍐🍌;🥭🍊🍇;🍊🍋🍓;🥭🍋🍐;🍉🍐🍋;🍒🍊🥭;🍐🍉🍇;🍊🍋🍒;🍐🍉🍊]
+$randomText[🥭🍇🍊;🍐🥭🍉;🍐🍓🍉;🍉🍇🍐;🍇🍊🍐;🥭🍇🍊;🍌🍐🍓;🍇🍐🥭;🍉🍉🍇]
+
+Você perdeu  ``$numberSeparator[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moedas;$authorID];1];.] moedas``]
+
+$setVar[moeda;$sub[$getVar[moeda;$authorID];$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1]];$authorID]
+$endif
+
+$if[$randomText[lose2;win;lose;sorte]==sorte]
+$nomention
+$color[7B07FF]
+$authorIcon[$authorAvatar]
+$author[$username[$authorID]#$discriminator[$authorID]]
+$description[🎊 **Roleta da Sorte**
+$randomText[🍕🍪🍬;🍩🍪🍪;🍬🍩🍬;🍫🍟🍩;🍮🍕🍫;🍟🍪🍦;🍪🍩🧁;🍦🍕🍭;🍭🍦🍬;🍪🍭🍬]
+$randomText[🍬🍬🍬;🧁🧁🧁;🍪🍪🍪;🍟🍟🍟;🍕🍕🍕;🍦🍦🍦;🍩🍩🍩;🍫🍫🍫;🍭🍭🍭]
+$randomText[🍭🍩🧁;🍕🍩🍬;🍕🍪🍬;🍬🍩🍕;🍩🧁🍮;🍭🍩🧁;🍦🍕🍪;🍩🍕🍭;🍬🍬🍩]
+
+Você ganhou ``$numberSeparator[$calculate[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1]+$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1]];.]  moedas``]
+
+$setVar[moeda;$sum[$calculate[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moeda;$authorID];1]+$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];all;$getVar[moedas;$authorID];1]];$getVar[moeda;$authorID]];$authorID]
+$endif
+
+$thumbnail[https://media.discordapp.net/attachments/926332505404104715/926332524974710835/1f3b0.png]
+
+$cooldown[1s;]
+$embedSuppressErrors[<:emoji_37:930302793414217738> Algo deu errado;> use assim: b!roleta <valor>
+ **Informações**
+・coloque apenas números!
+<a:boot_setadireita:927979955533533284> use `k` para mil. | `b!roleta 1k/10k/100k`
+<a:boot_setadireita:927979955533533284> use `m` para milhão. | `b!roleta 1m/10m/100m`
+<a:boot_setadireita:927979955533533284> use `b` para bilhão. | `b!roleta 1b/10b/100b`
+<a:boot_setadireita:927979955533533284> use `all` para  todas suas moedas. | `b!roleta all`;0086ff;;;]
+$reply
