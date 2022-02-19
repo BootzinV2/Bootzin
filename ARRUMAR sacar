@@ -1,0 +1,38 @@
+$onlyIf[$getVar[bot;$authorID]==on;> <:erro:925308445228412929>・bot indisponível para ser usado!]
+$onlyIf[$getServerVar[svBlackList]==off;> <:erro:925308445228412929>・servidor banido!]
+$onlyIf[$getVar[userBlackList;$authorID]==off;> <:erro:925308445228412929>・você está banido!]
+$onlyIf[$guildID!=;]
+
+$nomention
+$color[#81cefa]
+$onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];tudo;$getVar[moedas/bank;$authorID];1];all;$getVar[moedas/bank;$authorID];1]>=1;> $getServerVar[whatErro]**・Você não pode sacar um valor negativo.**
+<:user:935163052452614154>・`$username#$discriminator[$authorID] ($authorID)`]
+
+$onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];tudo;$getVar[moedas/bank;$authorID];1];all;$getVar[moedas/bank;$authorID];1]<=$getVar[moedas/bank;$authorID];> $getServerVar[whatErro]**・Você não tem esse valor em moedas para sacar.**
+<:user:935163052452614154>・`$username#$discriminator[$authorID] ($authorID)`]
+
+
+$title[<:transacoes:925529408196988978>・Saque]
+$description[Você sacou $getVar[currency] $numberSeparator[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];tudo;$getVar[moedas/bank;$authorID];1];all;$getVar[moedas/bank;$authorID];1]] moedas da sua conta bancária.]
+$footer[Utilize b!dep para depositar.]
+$footerIcon[$authorAvatar] $addTimestamp
+
+$setVar[moedas;$sum[$getVar[moedas;$authorID];$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];tudo;$getVar[moedas/bank;$authorID];1];all;$getVar[moedas/bank;$authorID];1]];$authorID]
+$setVar[moedas/bank;$sub[$getVar[moedas/bank;$authorID];$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$noMentionMessage;k;000;1];m;000000;1];b;000000000;1];tudo;$getVar[moedas/bank;$authorID];1];all;$getVar[moedas/bank;$authorID];1]];$authorID]
+
+$setVar[saqCount;$sum[$getVar[saqCount;$authorID];1];$authorID]
+
+
+$embedSuppressErrors[<:erro:925308445228412929> Erro;
+<:emoji_18:939033754939326484> **Como usar?**
+`b!sacar <valor>`
+
+<:book:939026208107155528> **Exemplo**
+<:emoji_52:939617433063403571>» **Saque 100 moedas do banco**
+`b!sacar 100`
+;0086ff;;;]
+
+$reply
+
+$setVar[cmdCount;$sum[$getVar[cmdCount;$authorID];1];$authorID]
+$setServerVar[cmdCount;$sum[$getServerVar[cmdCount];1]]
